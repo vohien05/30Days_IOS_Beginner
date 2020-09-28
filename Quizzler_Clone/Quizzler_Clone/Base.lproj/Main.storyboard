@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main BoardVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainBoardVC" customModule="Quizzler_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-Su-wc3">
+                                <rect key="frame" x="0.0" y="776" width="414" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="2eK-gt-kSo"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tmk-UQ-RjO">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8R-Oq-q15">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="658"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-eg-4VC" customClass="RoundBorderButton" customModule="Quizzler_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="668" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8nD-cr-yUU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="YES">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rBoderRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="rBorderColor">
+                                                <color key="value" red="1" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rBorderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="answerQuestionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9s1-0T-F8H"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-f0-hyU" customClass="RoundBorderButton" customModule="Quizzler_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="738" width="374" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="NO">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="rBorderColor">
+                                                <color key="value" red="1" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rBorderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rBoderRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="answerQuestionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="58n-R4-jL5"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-9f-gxg">
+                                        <rect key="frame" x="0.0" y="808" width="374" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="DBn-A6-Z5g"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="1" green="0.43137254901960786" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Cq3-f0-hyU" firstAttribute="height" secondItem="Lza-eg-4VC" secondAttribute="height" id="NL2-0x-auf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.6705882352941176" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tmk-UQ-RjO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Qu-rK-T1R"/>
+                            <constraint firstItem="Tmk-UQ-RjO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Cqv-pb-De0"/>
+                            <constraint firstItem="OBD-Su-wc3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Icu-Tk-I7t"/>
+                            <constraint firstAttribute="trailing" secondItem="Tmk-UQ-RjO" secondAttribute="trailing" constant="20" id="Vie-Bl-pWu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tmk-UQ-RjO" secondAttribute="bottom" id="mI5-FT-bzF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OBD-Su-wc3" secondAttribute="trailing" id="mWQ-KS-mUP"/>
+                            <constraint firstItem="OBD-Su-wc3" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="ni4-aV-ikP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oub-83-IPt"/>
+                    <connections>
+                        <outlet property="falseButton" destination="Cq3-f0-hyU" id="5PX-hB-HQ6"/>
+                        <outlet property="progressBar" destination="tLP-9f-gxg" id="h8I-d0-VSd"/>
+                        <outlet property="questionLabel" destination="q8R-Oq-q15" id="aMh-Y3-jHb"/>
+                        <outlet property="trueButton" destination="Lza-eg-4VC" id="LxA-2n-Jww"/>
+                        <segue destination="5ll-RE-MWg" kind="presentation" identifier="toAnswerResultModalSegue" id="kC7-EB-ZYW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
+        </scene>
+        <!--Answer Result ModalVC-->
+        <scene sceneID="ouK-EL-9gU">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="5ll-RE-MWg" customClass="AnswerResultModalVC" customModule="Quizzler_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JLr-Zz-pwT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f33-aG-jcN">
+                                <rect key="frame" x="57" y="370.5" width="300" height="155"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 / 7 Correct Answers" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFe-0i-gsU">
+                                        <rect key="frame" x="10" y="10" width="280" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CP-Ac-9ZX" customClass="RoundBorderButton" customModule="Quizzler_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="100" width="90" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="2ll-vH-Bqr"/>
+                                            <constraint firstAttribute="height" constant="45" id="rMa-mX-ccp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rBoderRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rBorderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="rBorderColor">
+                                                <color key="value" red="1" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="okButtonPressed:" destination="5ll-RE-MWg" eventType="touchUpInside" id="D2B-Fd-zfJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="8CP-Ac-9ZX" firstAttribute="top" secondItem="gFe-0i-gsU" secondAttribute="bottom" constant="32" id="7pi-vC-RHG"/>
+                                    <constraint firstAttribute="bottom" secondItem="8CP-Ac-9ZX" secondAttribute="bottom" constant="10" id="Az5-n0-SPh"/>
+                                    <constraint firstAttribute="trailing" secondItem="gFe-0i-gsU" secondAttribute="trailing" constant="10" id="IwJ-Y5-bI7"/>
+                                    <constraint firstItem="gFe-0i-gsU" firstAttribute="leading" secondItem="f33-aG-jcN" secondAttribute="leading" constant="10" id="SP0-3i-Hau"/>
+                                    <constraint firstItem="8CP-Ac-9ZX" firstAttribute="centerX" secondItem="f33-aG-jcN" secondAttribute="centerX" id="Uty-Im-5BS"/>
+                                    <constraint firstAttribute="width" constant="300" id="b3c-Sg-Wf2"/>
+                                    <constraint firstItem="gFe-0i-gsU" firstAttribute="top" secondItem="f33-aG-jcN" secondAttribute="top" constant="10" id="ocG-aD-Xhm"/>
+                                    <constraint firstAttribute="height" constant="155" id="qzv-bf-Va6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rBorderWidth">
+                                        <real key="value" value="-3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rBoderRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kw6-oW-twS"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f33-aG-jcN" firstAttribute="centerX" secondItem="JLr-Zz-pwT" secondAttribute="centerX" id="BU6-vv-EpZ"/>
+                            <constraint firstItem="f33-aG-jcN" firstAttribute="centerY" secondItem="JLr-Zz-pwT" secondAttribute="centerY" id="i9W-Rt-f7L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="gFe-0i-gsU" id="Hrl-6k-EEz"/>
+                        <outlet property="resultView" destination="f33-aG-jcN" id="UEA-e4-Unp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leY-p0-2pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876.8115942028987" y="93.75"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="8CP-Ac-9ZX">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Cq3-f0-hyU">
+            <size key="intrinsicContentSize" width="38" height="42"/>
+        </designable>
+        <designable name="Lza-eg-4VC">
+            <size key="intrinsicContentSize" width="48" height="42"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Background-Bubbles" width="352" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
